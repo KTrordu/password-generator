@@ -1,3 +1,98 @@
 * {
     box-sizing: border-box;
 }
+
+body {
+    background-color: #1F2937;
+}
+
+.head-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vw;
+}
+
+#head {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+}
+
+#styled-head {
+    color: #4ADF86;
+}
+
+.par-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#par1 {
+    font-size: 30px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular',
+    'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: #10B981;
+    margin-right: 2em;
+    width: 15vw;
+    height: 3vw;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: green;
+}
+
+.btn:active {
+    transform: scale(0.9);
+    background-color: green;
+}
+
+.input {
+    width: 15vw;
+    height: 1.75vw;
+    background-color: #1F2937;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: white;
+}
+
+.pass-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pass {
+    background-color: #273549;
+    width: 15vw;
+    height: 3vw;
+    margin-top: 4em;
+    border: none;
+    border-radius: 5px;
+    color: #55F991;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.pass:last-child {
+    margin-left: 2em;
+}
