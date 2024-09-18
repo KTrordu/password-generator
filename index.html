@@ -20,12 +20,16 @@
 
     <div class="btn-cont">
         <button class="btn" onclick="generatePass()">Generate Passwords</button>
-        <input type="text" class="input" placeholder="Enter password length">
+        <input type="text" placeholder="Enter password length" id="input">
+    </div>
+
+    <div class="sent-cont">
+        <p id="sent">Here are your passwords:</p>
     </div>
 
     <div class="pass-cont">
-        <div class="pass" id="pass1"></div>
-        <div class="pass" id="pass2"></div>
+        <div class="pass"><p id="pass1"></p></div>
+        <div class="pass"><p id="pass2"></p></div>
     </div>
 
     <script src="/js/index.js"></script>
