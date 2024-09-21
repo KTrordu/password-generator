@@ -6,8 +6,12 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L",
     "(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
 
-let passLengthEl = document.getElementById("input");
+const passLengthEl = document.getElementById("input");
 const defaultPassLength = 15;
+const pass1CopyEl = document.getElementById("copy1");
+const pass2CopyEl = document.getElementById("copy2");
+const pass1El = document.getElementById("pass1");
+const pass2El = document.getElementById("pass2");
 
 function generatePass() {
     
@@ -16,11 +20,17 @@ function generatePass() {
         return;
     }
     
+    let passLength;
+
+    if (passLengthEl.value == "") {
+        passLength = defaultPassLength;
+    } else {
+        passLength = passLengthEl.value;
+    }
+
     let pass1 = "";
     let pass2 = "";
-
     
-    let passLength = passLengthEl.value;
     let passHolder;
     let passCharacter;
     
@@ -41,3 +51,17 @@ function generatePass() {
     document.getElementById("pass1").innerHTML = pass1;
     document.getElementById("pass2").innerHTML = pass2;
 }
+
+pass1CopyEl.addEventListener("click", () => {
+    let text = pass1El.textContent;
+    navigator.clipboard.writeText(text);
+
+    alert("Copied to clipboard!");
+});
+
+pass2CopyEl.addEventListener("click", () => {
+    let text = pass2El.textContent;
+    navigator.clipboard.writeText(text);
+
+    alert("Copied to clipboard!");
+});
